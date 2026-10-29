@@ -1,35 +1,8 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KWT Parts Control</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="KWT Parts">
-<meta name="theme-color" content="#0b6e7a">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="icon" href="icon.png">
-<style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f3f5f6;color:#17232b;font:16px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:16px;box-sizing:border-box}
-@media (prefers-color-scheme:dark){body{background:#0f171c;color:#e4ecef}}
-img{width:72px;height:72px;border-radius:16px}
-button{font:600 15px inherit;background:#0b6e7a;color:#fff;border:0;border-radius:6px;padding:10px 16px;margin-top:12px}
-</style>
-</head><body>
-<div id="box"><img src="icon.png" alt=""><p>Opening KWT Parts Control…</p></div>
-<script>
-// Loads the newest published app screens from the shared database, so this page never needs updating.
-(async () => {
-  const URL_ = "https://ouqrbnzioowcdzcoxgsa.supabase.co", KEY = "sb_publishable_KEjBZRXx9x0XHVP2D1PB6A_3qFbu1hm";
-  try {
-    const r = await fetch(URL_ + "/rest/v1/rpc/app_shell", { method: "POST", headers: { "Content-Type": "application/json", apikey: KEY }, body: "{}" });
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    const s = await r.json();
-    if (!s || !s.html) throw new Error("no app published yet");
-    document.open(); document.write(s.html); document.close();
-  } catch (e) {
-    document.getElementById("box").innerHTML = '<img src="icon.png" alt=""><p>Could not reach the parts database. Check your internet connection.</p><button onclick="location.reload()">Try again</button>';
-  }
-})();
-</script>
-</body></html>
+<!-- The app moved to https://kuwait-lab-service.github.io/ ; old links (customer, status and signing links) keep working through this page. -->
+<script>location.replace("https://kuwait-lab-service.github.io/" + location.search + location.hash);</script>
+<meta http-equiv="refresh" content="0; url=https://kuwait-lab-service.github.io/">
+<style>body{font:16px system-ui,sans-serif;display:grid;place-items:center;min-height:90vh;margin:0;color:#0b2a4a}a{color:#0b6e7a}</style>
+</head><body><p>KWT Parts Control moved to <a href="https://kuwait-lab-service.github.io/">kuwait-lab-service.github.io</a>.</p></body></html>
